@@ -2,7 +2,7 @@ pipeline{
 
     agent {
         
-        Dockerfile{
+        dockerfile{
             label 'docker'
         }
     }
