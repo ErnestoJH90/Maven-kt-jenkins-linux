@@ -1,6 +1,7 @@
 pipeline{
 
     agent {
+        
         Dockerfile{
             true
             label 'docker'
