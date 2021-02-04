@@ -1,8 +1,9 @@
 pipeline{
-    agent any
-
-    tools {
-        maven 'Mvn'
+    agent {
+        docker{
+            image 'maven'
+            label 'docker'
+        }
     }
     stages{
         stage('Checkout'){
