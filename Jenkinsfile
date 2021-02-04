@@ -1,10 +1,12 @@
 pipeline{
+
     agent {
-        docker{
-            image 'maven'
+        
+        Dockerfile{
             label 'docker'
         }
     }
+        
     stages{
         stage('Checkout'){
             steps{
