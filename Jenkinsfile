@@ -29,9 +29,8 @@ pipeline{
         stage('Delivery'){
             steps{
                 archiveArtifacts artifacts: 'Reports.txt', followSymlinks: false
+                 sh 'echo ${SALUDO}'
             }
         }
-            
     }
-
 }
