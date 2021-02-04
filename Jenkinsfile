@@ -2,8 +2,12 @@ pipeline{
     agent {
         docker{
             image 'maven'
+            args '-v m2/tmp'
             label 'docker'
         }
+    }
+    environment{
+        JAVA_TOOLS_OPTIONS = '-Duser.home=/tmp'
     }
     stages{
         stage('Checkout'){
